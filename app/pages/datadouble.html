@@ -2,12 +2,32 @@
 <html data-ng-app="myApp">
 <head>
     <title>双向数据绑定</title>
+    <meta charset="utf-8">
 </head>
 <body>
+<div data-ng-controller="wordCtrl">
+    <input type="text" data-ng-model="word">
+
+    <p data-ng-bind="word"></p>
+    <button data-ng-click="talk(word)">测试的按钮</button>
+</div>
 
 </body>
-<script src="/app/public/lib/angular/angular.min.js" type="text/javascript"></script>
+<script src="../public/lib/angular/angular.min.js" type="text/javascript"></script>
 <script type="text/javascript">
-    var app=angular.module('myApp',[])
+    var app = angular.module('myApp', [])
+    app.controller('wordCtrl', function ($scope, $timeout) {
+        $timeout(function () {
+            $scope.word = 'hello';
+        }, 100);
+
+        $scope.$watch('word', function () {
+            console.log($scope.word);
+        });
+        $scope.talk = function (word) {
+            alert(word);
+        };
+
+    })
 </script>
 </html>

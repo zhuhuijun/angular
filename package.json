@@ -1,0 +1,26 @@
+{
+  "name": "angualr",
+  "version": "1.0.0",
+  "description": "angular",
+  "main": "server.js",
+  "scripts": {
+    "test": "gulp test",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zhuhuijun/angular.git"
+  },
+  "keywords": [
+    "node"
+  ],
+  "author": "zhuhj",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zhuhuijun/angular/issues"
+  },
+  "homepage": "https://github.com/zhuhuijun/angular",
+  "dependencies": {
+    "express": "^4.13.3"
+  }
+}
