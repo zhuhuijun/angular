@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html data-ng-app="myApp">
+<head>
+    <title>评分</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css"/>
+    <style type="text/css">
+        .fa {
+            float: left;
+            list-style: none;
+            width: 15px;
+            height: 15px;
+            display: inline-block;
+        }
+
+        .fa-start {
+            background-image: url('images/solid.png');
+        }
+
+        .fa-start-empty {
+            background-image: url('images/start.png');
+        }
+    </style>
+</head>
+<body data-ng-controller="StartCtrl">
+<ul>
+    <li class="fa" data-ng-class="{'fa-start':score>=1,'fa-start-empty':score<1}" ng-mouseenter="score=1"></li>
+    <li class="fa" data-ng-class="{'fa-start':score>=2,'fa-start-empty':score<2}" ng-mouseenter="score=2"></li>
+    <li class="fa" data-ng-class="{'fa-start':score>=3,'fa-start-empty':score<3}" ng-mouseenter="score=3"></li>
+    <li class="fa" data-ng-class="{'fa-start':score>=4,'fa-start-empty':score<4}" ng-mouseenter="score=4"></li>
+    <li class="fa" data-ng-class="{'fa-start':score>=5,'fa-start-empty':score<5}" ng-mouseenter="score=5"></li>
+
+</ul>
+</body>
+<script src="lib/angular/angular.min.js" type="text/javascript"></script>
+<script src="js/start.js" type="text/javascript"></script>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html data-ng-app="myApp">
+<head>
+    <title>事件交互</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css"/>
+</head>
+<body data-ng-controller="CartCtrl">
+<div data-ng-controller="TotalCtrl" class="container">
+    <p><input type="text" data-ng-model="total" data-ng-change="change()"/></p>
+    <div data-ng-controller="DetailCtrl">
+        <table class="table table-bordered">
+            <tr>
+                <td>名称</td>
+                <td>价格</td>
+                <td>数量</td>
+
+            </tr>
+            <tr data-ng-repeat="item in items" >
+                <td>{{item.name}}</td>
+                <td>{{item.price}}</td>
+                <td><input type="text" data-ng-model="item.amount" data-ng-change="change()" /></td>
+
+            </tr>
+        </table>
+    </div>
+</div>
+
+</body>
+<script src="lib/angular/angular.min.js" type="text/javascript"></script>
+<script src="js/event.js" type="text/javascript"></script>
+</html>
