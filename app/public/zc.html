@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html data-ng-app="myApp">
+<head>
+    <title>指令和控制器的交互</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css"/>
+
+</head>
+<body>
+<div data-ng-controller="Ctrl1">
+    <person like="fight()">孙悟空</person>
+    <span data-ng-bind="hoby"></span>
+</div>
+<div data-ng-controller="Ctrl2">
+    <person like="eat()">猪八戒</person>
+</div>
+</body>
+<script src="lib/angular/angular.min.js" type="text/javascript"></script>
+<script src="js/zc.js" type="text/javascript"></script>
+</html>
