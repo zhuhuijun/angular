@@ -10,6 +10,9 @@ app.controller('FormCtrl', function ($scope) {
 });
 app.directive('zfMinlength', function () {
     return {
-        restrict: 'A'
+        restrict: 'A',
+        link:function(scope,element,attrs){
+            
+        }
     };
 });
