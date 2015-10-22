@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html data-ng-app="myApp">
+<head>
+    <title>include</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css"/>
+    <style>
+        .title {
+            height: 30px;
+            width: 400px;
+            border: solid red 1px;
+            background-color: gray;
+        }
+
+        .content {
+            height: 100px;
+            width: 400px;
+            border: solid #000000 1px;
+        }
+    </style>
+</head>
+<body>
+<div data-ng-controller="OpenCtrl">
+    <group>
+        <opener title="opener.title" ng-repeat="opener in openers">
+            {{opener.content}}
+        </opener>
+    </group>
+
+</div>
+
+</body>
+<script src="lib/angular/angular.min.js" type="text/javascript"></script>
+<script src="js/includes.js" type="text/javascript"></script>
+</html>

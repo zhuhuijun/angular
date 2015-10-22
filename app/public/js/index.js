@@ -34,7 +34,17 @@ app.directive('zfUnique', function ($http) {
         require: 'ngModel',
         link: function (scope, element, attrs, ngModelCtrl) {
             scope.$watch(attrs.ngModel, function () {
-
+                var options = {
+                    url: '/check',
+                    method: 'POST',
+                    data: {usernick: scope.user.usernick}
+                };
+                $http(options).success(function (data, status, headers, config) {
+                    console.log(data);
+                    ngModelCtrl.$setValidity('unique', !data.exists);
+                }).error(function (msg) {
+                        console.log(msg);
+                    });
             });
         }
     };

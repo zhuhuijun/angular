@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html data-ng-app="myApp">
+<head>
+    <title>include</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css"/>
+    <style>
+        .title {
+            height: 30px;
+            width: 400px;
+            border: solid red 1px;
+            background-color: red;
+        }
+
+        .content {
+            height: 100px;
+            width: 400px;
+            border: solid #000000 1px;
+        }
+    </style>
+</head>
+<body>
+<div data-ng-controller="InCtrl">
+    <!--这个是字符串的写法-->
+    <div data-ng-include="'hello.html'"></div>
+    <!--这个是属性的写法$scope.hello = {html: 'hello.html'};-->
+    <div data-ng-include="hello.html"></div>
+</div>
+<div data-ng-controller="OpenCtrl">
+    <opener title="title">
+        {{content}}
+    </opener>
+</div>
+
+</body>
+<script src="lib/angular/angular.min.js" type="text/javascript"></script>
+<script src="js/include.js" type="text/javascript"></script>
+</html>

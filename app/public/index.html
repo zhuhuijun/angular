@@ -21,6 +21,9 @@
             昵称:
             <input type="text" name="usernick" data-ng-model="user.usernick" zf-unique/>
 
+            <div data-ng-show="myform.usernick.$invalid" style="color: red">
+                <span data-ng-show="myform.usernick.$error.unique">不唯一</span>
+            </div>
             <input type="submit" data-ng-disabled="myform.$invalid" value="提交"/>
 
         </form>
