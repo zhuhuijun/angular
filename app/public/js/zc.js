@@ -45,6 +45,7 @@ app.directive('person', function () {
                 // scope.fight();//如果没有会报错
                 // scope.$apply('fight()')
                 //3.根据属性获得方法
+                // scope.$apply(element.attr('like'));
                 scope.$apply(attrs.like)
             });
         }

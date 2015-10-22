@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html data-ng-app="myApp">
+<head>
+    <title>控制器的属性和指令的交互</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css"/>
+    <style type="text/css">
+        .red {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<div data-ng-controller="GirlCtrl">
+    <input type="text" data-ng-model="age"/>
+    <input type="text" data-ng-model="girlname"/>
+    <input type="text" data-ng-model="money"/>
+    <girl beautify kind word="word"  name="{{girlname}}" age="{{age}}" money="money"   hit="hit()"></girl>
+</div>
+</body>
+<script src="lib/angular/angular.min.js" type="text/javascript"></script>
+<script src="js/zls1.js" type="text/javascript"></script>
+</html>
