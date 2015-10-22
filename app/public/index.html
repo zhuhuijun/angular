@@ -9,14 +9,17 @@
 <div class="container">
     <div class="row">
         <form name="myform" data-ng-submit="save()" data-ng-controller="FormCtrl">
-            用户名:<input type="text" name="username" data-ng-model="user.username" required data-ng-minlength="3" zf-minlength="6"/>
+            用户名:<input type="text" name="username" data-ng-model="user.username" required data-ng-minlength="3"
+                       zf-minlength="6"/>
 
             <div data-ng-show="myform.username.$invalid" style="color: red">
                 <span data-ng-show="myform.username.$error.required">请填写用户名</span>
                 <span data-ng-show="myform.username.$error.minlength">最小长度是3</span>
+                <span data-ng-show="myform.username.$error.zfMinlength">最小长度是6</span>
             </div>
-            mima:<input type="text" name="userpwd" data-ng-model="user.userpwd" required/>
-
+            密码:<input type="text" name="userpwd" data-ng-model="user.userpwd" required/>
+            昵称:
+            <input type="text" name="usernick" data-ng-model="user.usernick" zf-unique/>
 
             <input type="submit" data-ng-disabled="myform.$invalid" value="提交"/>
 

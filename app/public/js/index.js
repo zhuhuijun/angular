@@ -10,9 +10,32 @@ app.controller('FormCtrl', function ($scope) {
 });
 app.directive('zfMinlength', function () {
     return {
-        restrict: 'A',
-        link:function(scope,element,attrs){
-            
+        link: function (scope, element, attrs) {
+            element.bind('keydown', function () {
+                var val = element.val();
+                var minl = attrs['zfMinlength'];
+                if (!val || val.length < 6) {
+                    scope.myform.username.$invalid = false;
+                    scope.myform.username.$error['zfMinlength'] = '长度不能小于' + minl;
+                    console.log('ddd');
+                } else {
+                    scope.myform.username.$error['zfMinlength'] = null;
+                    scope.myform.username.$invalid = true;
+                }
+            });
+        }
+    };
+});
+/***
+ * 唯一用户名的校验
+ */
+app.directive('zfUnique', function ($http) {
+    return {
+        require: 'ngModel',
+        link: function (scope, element, attrs, ngModelCtrl) {
+            scope.$watch(attrs.ngModel, function () {
+
+            });
         }
     };
 });
