@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html data-ng-app="myApp">
+<head>
+    <title>drag</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css"/>
+    <style type="text/css">
+        #div1 {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            position: absolute;
+            left: 20px;
+            top: 20px;
+            border: 1px red solid;
+        }
+    </style>
+<body>
+<div data-ng-controller="OpenCtrl">
+    <div my-drag id="div1">
+        欢迎你
+    </div>
+</div>
+</body>
+<script src="lib/jquery/dist/jquery.js" type="text/javascript"></script>
+<script src="lib/angular/angular.min.js" type="text/javascript"></script>
+<script src="js/drag.js" type="text/javascript"></script>
+</html>

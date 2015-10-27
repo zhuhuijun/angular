@@ -4,8 +4,20 @@
     <title>include</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css"/>
+    <style type="text/css">
+        .red {
+            color: red;
+        }
+    </style>
 <body>
 <div data-ng-controller="OpenCtrl">
+    <div times="4">
+        <p>{{words}}</p>
+    </div>
+
+    <div times="2">
+        <p>{{words}}</p>
+    </div>
 </div>
 </body>
 <script src="lib/angular/angular.min.js" type="text/javascript"></script>
